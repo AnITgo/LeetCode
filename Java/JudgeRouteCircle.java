@@ -4,7 +4,17 @@ public class JudgeRouteCircle {
 	public static void main(String[] args) {
 		boolean end = judgeCircle("UDDL");
 		boolean end2 = judgeCircle2("UDDU");
-		System.out.println(end);
+		boolean end3 = judgeCircle3("UDLRRLDLLUL");//需要学习的算法！！！
+		//System.out.println(end);
+		//System.out.println(end2);
+		System.out.println(end3);
+		// UDDLUDDL
+	}
+
+	private static boolean judgeCircle3(String moves) {
+		moves=" " + moves + " ";  //考虑到边界情况，以"L"为例，若L在字符串首端或尾端，则无法正确得出L的个数
+		System.out.println(moves.split("L").length); //split("L").length 返回的是分割后字符串的个数，在前后加空字符后，等于分隔符的个数+1
+        return moves.split("L").length==moves.split("R").length && moves.split("U").length == moves.split("D").length;
 	}
 
 	private static boolean judgeCircle(String moves) {
