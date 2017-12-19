@@ -1,0 +1,1 @@
+﻿1.Random()函数：Math.Random()生成的随机数与时间有关，util.Random()更为灵活。详解：http://blog.sina.com.cn/s/blog_93dc666c0101h3gd.html
